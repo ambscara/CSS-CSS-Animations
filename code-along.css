@@ -1,15 +1,17 @@
 /****************************************
 * Transform
 ****************************************/
-.transform-demo > div {
-  height: 40px;
-  background: salmon;
-  width: 20%;
-  margin: auto;
-  display: inline-block;
-  transform: translate (150px);
-  opacity: 0.5%;
-}
+  .transform-demo > div {
+    height: 40px;
+    background: salmon;
+    width: 20%;
+    margin: auto;
+    display: inline-block;
+    transform: translate(150px);
+    opacity: 0.5;
+  }
+
+
 
 /****************************************
 * Transition
@@ -20,10 +22,18 @@
   width: 200px;
   height: 200px;
   filter: grayscale(100%);
+  transition-duration: 2s;
+  
+  
+  
+
 
 }
 
 .transition-demo img:hover {
+  filter: none;
+  transform: scale(1.25) rotate(360deg);
+  
 
 }
 
@@ -37,11 +47,16 @@
   width: 500px;
   margin: auto;
   background-color: palegreen;
+  animation-name: sale-bar;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;
 
 }
 
 @keyframes sale-bar {
-  0% { background-color: lightgreen; width: 450px }
-  75% { background-color: #FF033E; width: 125x }
-  100% { background-color: crimson; width: 10px }
+  0% { background-color: lightcoral; width: 450px }
+  25% { background-color: teal; width: 350px }
+  50% { background-color: pink width: 250px }
+  75% { background-color: #FF033E; width: 150x; border-radius: 0; transform: scale(1) }
+  100% { background-color: plum; width: 10px; border-radius: 100%; transform: scale(0)}
 }
